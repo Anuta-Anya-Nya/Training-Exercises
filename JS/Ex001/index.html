@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Решение задачек</title>
+</head>
+<body>
+    <script>
+        function filter_list(l) {
+    // Return a new array with the strings filtered out
+    let arrayFilter = [];
+    for (let i = 0; i < l.length; i++) 
+    {
+        if (typeof l[i] == "number") 
+        {
+            arrayFilter.push(l[i]);
+            console.log(l[i]);
+        }
+    }
+    return arrayFilter;
+}
+
+alert(filter_list([1, 2, 'a', 'b']));
+alert(filter_list([1,'a','b',0,15]));
+alert(filter_list([1,2,'aasf','1','123',123]));
+    </script>
+</body>
+</html>
