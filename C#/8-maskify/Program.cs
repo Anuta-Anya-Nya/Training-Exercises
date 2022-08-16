@@ -20,7 +20,12 @@ Examples
 string Maskify(string cc)
   {
     string result = "";
-    for (int i=0; i<cc.Length-4; i++)
+    if (cc.Length<=4){
+      result = cc;
+    }
+    else 
+    {
+      for (int i=0; i<cc.Length-4; i++)
     {
         result = result + "#";
     }
@@ -28,8 +33,10 @@ string Maskify(string cc)
     {
         result = result + cc[i];
     }
+    }
+    
     return result;
   }
 
-string text = "1";
+string text = "987654321";
 Console. WriteLine(Maskify(text));
