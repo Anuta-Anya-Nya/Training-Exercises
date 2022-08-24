@@ -1,14 +1,19 @@
+//ctrl + / - закомментировать кусок кода
+
 char указывается в ' ';
 Convert.ToInt32(char.ToString()) - char перевести в число: Сначала в строку, потом в число, иначе переводится в ASCII код; int a1=int.Parse(s[0].ToString());
 ----------------------------------------------
 double - число с плавающей запятой
+----------------------------------------------
+int[] array = new int[7]- массив длины 7
+int[,] array = new int[2,3] - двумерный массив, 2 строки, 3 столбца
 ----------------------------------------------
 string result = String.Empty; - пустая строка
 return $"{coefficient * exponent}x^{exponent - 1}"; - возвращение строки с вычислением чисел
 String.Join(", ", testArr) - склеивается строка из массива, разделение запятыми
 int[] arr = numbers.Split(' ').Select(Int32.Parse).ToArray(); // массив чисел из строки
 ----------------------------------------------
-Console.WriteLine(String.Join(", ", testArr)); // Массив выводит строкой без запятой в конце!!
+Console.WriteLine($"[{String.Join(", ", arr)}]"); // Массив выводит строкой без запятой в конце!!
 x.Replace("a","B") замена символа "а" на символ "В" в строке х;
 .ToLower() нижний регистр букв;
 Math.Abs(int x) - модуль числа x;
@@ -16,6 +21,8 @@ Math.Pow(x, y) - возведение числа х в степень у;
 Math.Sqrt(х) - корень квадратный
 new Random().Next(1, 11); - рандомное число от 1 до 10
 var listnums = numbers.Split(' ').Select(int.Parse); //коллекция из строки чисел разделенных пробелом
+void function (int[] arr, out in sumP, out int sumN) - возвращает sumP и sumN, можно обращаться к ним дальше по коду
+anyVariable.GetType() - вывести тип переменной anyVariable, GetType().Name выводит тип без System.
 ------------------------------------------------
 if (!int.TryParse(Console.ReadLine(), out int result))
 {
@@ -31,4 +38,16 @@ switch (x)
     break;
     default: hgjfhkghfh;
     break;
+}
+-----------------------
+void FillImg(int row, int coll) - пример рекурсии
+{
+    if (pic[row, coll] == 0)
+    {
+        pic[row, coll] = 1;
+        FillImg(row - 1, coll);
+        FillImg(row, coll - 1);
+        FillImg(row + 1, coll);
+        FillImg(row, coll + 1);
+    }
 }
